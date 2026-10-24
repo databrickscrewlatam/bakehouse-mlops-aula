@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 01 · Feature table
 # MAGIC
@@ -19,9 +23,10 @@
 
 # COMMAND ----------
 
+# Testing CI/CD with Databricks
 dbutils.widgets.text("catalog", "workspace")
 dbutils.widgets.text("schema", "bakehouse_dev")
-#testing
+
 catalog = dbutils.widgets.get("catalog")
 schema = dbutils.widgets.get("schema")
 tabla_features = f"{catalog}.{schema}.ventas_diarias_features"
